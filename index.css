@@ -193,7 +193,6 @@ li:hover {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        border-radius: 4px;
         text-decoration: none;
         background-color: #FFE964;
       }
