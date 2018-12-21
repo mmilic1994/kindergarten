@@ -32,19 +32,31 @@ li {
     display: inline-block;
     text-align: center; 
     margin: 0.5rem 1rem;
-    
-
+    text-decoration: none;
 }
 
-#main {
+li:hover {
+    color: #24365A;
+    transform: scale(1.3);
+      
+}
+
+.navlist ul a {
+    text-decoration: none;
+}
+
+.main {
     background-image: url(img/banner.jpg);
     margin-bottom: 0;
     height: 23rem;
     padding: 11rem;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
 
 }
 
-#main h1 {
+.main h1 {
     font-weight: 900;
     color: #FFFFFF;
     text-align: left;
@@ -68,44 +80,53 @@ li {
     color: #223C88;
 }
 
-#mission {
+.on {
     background-color:  #FFE964;
     margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    justify-content: center;
+    width: 100vw;
 }
 
-#mission p {
-    padding-bottom: 2rem;
+.on h2 {
+    width: 100%;
 }
 
-#about {
+.on p {
+    padding-bottom: 2rem;   
+}
+
+.about {
     background-color:  #FFFFFF;
     justify-content: center;
     padding: 3rem 0rem;
 }
 
-#about h2 {
+.about h2 {
     text-align: left;
     margin-left: 15%;
 }
 
-#team {
+.team {
    background-color:#FF523D;
    color: #FFFFFF;
    text-align: center;
 }
 
-#team h2 {
+.team h2 {
     text-align: left;
     margin-left: 15%;  
 }
 
-#team p {
+.team p {
     text-align: center;
     margin: auto;
     padding: 1rem;
 }
 
-#contact
+.contact
 {
     background-color:  #223C88;
     color: #FFFFFF;
@@ -113,7 +134,139 @@ li {
     
 }
 
-#contact h2, p {
+.contact h2, p {
     text-align: left;
     margin-left: 15%; 
 }
+
+@media screen and (max-width: 1000px) {
+
+    .contact h2, p {
+        text-align: left;
+        padding: 2rem;
+        margin-left: 0;
+    }
+
+    .main h1 {
+    margin-left: -8rem;
+    font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 515px) {
+
+    .about h2, .team h2 {
+       display: flex;
+       justify-content: center;
+       margin: auto 0;
+    }
+
+    header, nav .burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      nav .burger {
+        font-size: 4em;
+        flex-flow: row nowrap;
+        padding: 1.4rem;
+        background-color: #24365A;
+        color: #fff;
+      }
+      
+      nav .burger::after {
+        content: "\2630";
+      }
+      
+      .drop-item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        border-radius: 4px;
+        text-decoration: none;
+        background-color: #FFE964;
+      }
+
+      .dropdown a:hover {
+        color: #24365A; 
+      }
+
+      li:hover {
+        color: #24365A;
+      }
+      
+      .current {
+        cursor: pointer;
+      }
+      
+      .drop-item:hover {
+        color: #24365A;
+        background-color: #FFE964;
+      }
+      
+      .dropdown {
+        height: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        transition: 1s;
+        
+      }
+      
+      .dropdown a {
+        font-size: 1.5rem;
+        color: #24365A;
+        
+      }
+      
+      .exp .dropdown {
+        height: 40vh;
+        background-color: #FFE964;
+      }
+
+      .navlist {
+          display: flex;
+          justify-content: center;
+      }
+
+      ul {
+          margin: auto 0;
+          padding-right: 2rem;
+          
+      }
+
+      li {
+          width: 100vw;
+          background-color: #FFE964;
+          text-align: center;
+      }
+
+      .contact p {
+        width: 200px;
+    }
+      
+}
+
+@media screen and (max-width: 375px) {
+    .team img {
+        height: 250px;
+    }
+
+    .main h1 {
+        font-size: 2.5rem;
+    }
+
+    
+}
+
+
